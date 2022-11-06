@@ -76,22 +76,7 @@ function renderCharacters(arr) {
 
 renderCharacters();
 
-// 
-// const deleteButton = document.createElement("button");
-// deleteButton.innerText="Delete";
-// deleteButton.classList.add("dlt-btn")
-// const infoButton = document.createElement("button");
-// infoButton.innerText="info";
-// infoButton.classList.add("info-btn");
 
-
-// charNames.appendChild(deleteButton);
-// charNames.appendChild(infoButton);
-
-
-//  
-
-//  
 
 const deleteButton = document.querySelector(".dlt-btn");
 const charNames = document.querySelector(".names");
