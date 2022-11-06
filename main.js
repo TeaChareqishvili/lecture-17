@@ -95,6 +95,8 @@ charNames.appendChild(infoButton);
         charNames.remove();
     
  }
+
+ 
       
 
 
