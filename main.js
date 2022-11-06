@@ -64,6 +64,7 @@ function renderCharacters(arr) {
                 <p>
                   House: ${char.house}
                 </p>
+                <button class="dlt-btn">Delete</button>
                 </div>
 				<img class="char-img" src="${char.image}"  alt="${char.first_name}"/>
              </div>
@@ -75,29 +76,37 @@ function renderCharacters(arr) {
 
 renderCharacters();
 
+// 
+// const deleteButton = document.createElement("button");
+// deleteButton.innerText="Delete";
+// deleteButton.classList.add("dlt-btn")
+// const infoButton = document.createElement("button");
+// infoButton.innerText="info";
+// infoButton.classList.add("info-btn");
+
+
+// charNames.appendChild(deleteButton);
+// charNames.appendChild(infoButton);
+
+
+//  
+
+//  
+
+const deleteButton = document.querySelector(".dlt-btn");
 const charNames = document.querySelector(".names");
-const deleteButton = document.createElement("button");
-deleteButton.innerText="Delete";
-deleteButton.classList.add("dlt-btn")
-const infoButton = document.createElement("button");
-infoButton.innerText="info";
-infoButton.classList.add("info-btn");
 
-
-charNames.appendChild(deleteButton);
-charNames.appendChild(infoButton);
-
-
- deleteButton.addEventListener('click', deleteInfo);
-
- function deleteInfo(){
+deleteButton.addEventListener('click', deleteInfo);
+function deleteInfo(){
     
-        charNames.remove();
-    
- }
-
- 
-      
+            charNames.remove();
+        //  if (click == characters[0]){
+        //     characters[0].remove();
+        //  } else if (click==character[1]){
+        //     characters[1].remove();
+        //  }
+        
+     }
 
 
 
