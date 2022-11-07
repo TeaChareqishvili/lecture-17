@@ -76,4 +76,9 @@ p{
    margin: 20px 5px;
    
 }
-
+.actor-name{
+    opacity:0;
+}
+.actor-name.active{
+    opacity:100%;
+}

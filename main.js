@@ -64,7 +64,9 @@ function renderCharacters(arr) {
                 <p>
                   House: ${char.house}
                 </p>
+                <h3 class="actor-name">${char.actor}</h3>
                 <button class="dlt-btn">Delete</button>
+                <button class="info-btn">Info</button>
                 </div>
 				<img class="char-img" src="${char.image}"  alt="${char.first_name}"/>
              </div>
@@ -78,21 +80,29 @@ renderCharacters();
 
 
 
-const deleteButton = document.querySelector(".dlt-btn");
+const deleteButton = document.querySelectorAll(".dlt-btn");
+const infoButton = document.querySelectorAll(".info-btn");
+
+
 const charNames = document.querySelector(".names");
 
-deleteButton.addEventListener('click', deleteInfo);
-function deleteInfo(){
-    
-            charNames.remove();
-        //  if (click == characters[0]){
-        //     characters[0].remove();
-        //  } else if (click==character[1]){
-        //     characters[1].remove();
-        //  }
-        
-     }
 
+deleteButton.forEach((btn) => {
+    btn.addEventListener("click", () => {
+       
+        btn.closest(".char-names").remove();
+    });
+});
+
+infoButton.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        // console.log(btn);
+
+        btn.parentElement
+            .querySelector(".actor-name")
+            .classList.toggle("active");
+    });
+});
 
 
 
